@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EtecShop")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2d9e532bb8c82fb6adec9625910cb2fea074a8f9")]
 [assembly: System.Reflection.AssemblyProductAttribute("EtecShop")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EtecShop")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

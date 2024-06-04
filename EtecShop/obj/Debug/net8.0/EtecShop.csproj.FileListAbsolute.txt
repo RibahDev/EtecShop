@@ -107,3 +107,4 @@ C:\Users\etec\Documents\GitHub\EtecShop\EtecShop\obj\Debug\net8.0\refint\EtecSho
 C:\Users\etec\Documents\GitHub\EtecShop\EtecShop\obj\Debug\net8.0\EtecShop.pdb
 C:\Users\etec\Documents\GitHub\EtecShop\EtecShop\obj\Debug\net8.0\EtecShop.genruntimeconfig.cache
 C:\Users\etec\Documents\GitHub\EtecShop\EtecShop\obj\Debug\net8.0\ref\EtecShop.dll
+C:\Users\etec\Documents\GitHub\EtecShop\etecshop\obj\Debug\net8.0\EtecShop.sourcelink.json
