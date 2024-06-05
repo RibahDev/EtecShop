@@ -8,6 +8,7 @@ public class ProdutoVM
     public Produto Produto { get; set; }
 
     public List<Avaliacao> Avaliacoes { get; set; }
+    
     [Required(ErrorMessage = "Informe o Nome")]
     [StringLength(60, ErrorMessage = "O Nome possuir até 60 caracteres")]
     public string Nome { get; set; }
