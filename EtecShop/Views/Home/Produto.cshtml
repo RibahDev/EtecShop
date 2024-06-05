@@ -1,32 +1,31 @@
 @model ProdutoVM
 @{
     ViewData["Title"] = "Produto";
-} 
-<section class="py-5 text-center container">
+} <section class="py-5 text-center container">
     <div class="row py-lg-2">
         <div class="col-lg-6 col-md-8 mx-auto">
             <h1 class="fw-light">EtecShop</h1>
             <p class="lead text-muted">Seu ponto de compras na internet.</p>
         </div>
     </div>
-</section>
-<div class="album py-5 bg-light">
-    <div class="container ">
-        <div class="row">
-            <div class="col-md-5">
-                <img class="img-fluid px-4" src="@Model.Foto" alt="@Model.Nome">
+    </section>
+    <div class="album py-5 bg-light">
+        <div class="container ">
+            <div class="row">
+                <div class="col-md-5">
+                    <img class="img-fluid px-4" src="@Model.Produto.Foto" alt="@Model.Produto.Nome">
+                </div>
+                <div class="col-md-7">
+                    <h2 class="display-6">@Model.Produto.Nome</h2>
+                    <p class="text-muted">@Model.Produto.Categoria.Nome</p>
+                    <p class="mt-5">@Model.Produto.Descricao</p>
+                    <p class="fs-3 fw-bolder">R$ @Model.Produto.Preco.ToString("N2")</p>
+                </div>
             </div>
-            <div class="col-md-7">
-                <h2 class="display-6">@Model.Nome</h2>
-                <p class="text-muted">@Model.Categoria.Nome</p>
-                <p class="mt-5">@Model.Descricao</p>
-                <p class="fs-3 fw-bolder">R$ @Model.Preco.ToString("N2")</p>
-            </div>
-        </div>
-        <hr class="my-5">
-        <div class="row">
-            <div class="col">
-                <h4 class="mb-4">Comentários sobre o Produto</h4>
+            <hr class="my-5">
+            <div class="row">
+                <div class="col">
+                    <h4 class="mb-4">Comentários sobre o Produto</h4>
                     @if (Model.Avaliacoes.Count == 0)
                     {
                         <div class="card rounded-3 mt-4">
@@ -52,8 +51,7 @@
                                 </div>
                             </div>
                         </div>
-                    } 
-                    <div class="card rounded-3 mt-4">
+                    } <div class="card rounded-3 mt-4">
                         <h5 class="card-header">Deixe sua avaliação</h5>
                         <form method="post" asp-action="Produto">
                             <input type="hidden" asp-for="Produto.Id">
@@ -81,24 +79,24 @@
                                 <input type="submit" value="Enviar Avaliação" class="btn btn-primary my-2">
                             </div>
                         </form>
-                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-@section Scripts {
-    <partial name="_ValidationScriptsPartial"></partial>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script>
-        let avaliado = '@Html.Raw(TempData["Avaliacao"])';
-        if (avaliado != '') {
-            window.scrollTo(0, document.body.scrollHeight);
-            Swal.fire({
-                title: 'Avaliação de Produto',
-                text: avaliado,
-                icon: 'success'
-            })
-        }
-    </script>
-}
+    </div>
+    
+    @section Scripts {
+        <partial name="_ValidationScriptsPartial"></partial>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script>
+            let avaliado = '@Html.Raw(TempData["Avaliacao"])';
+            if (avaliado != '') {
+                window.scrollTo(0, document.body.scrollHeight);
+                Swal.fire({
+                    title: 'Avaliação de Produto',
+                    text: avaliado,
+                    icon: 'success'
+                })
+            }
+        </script>
+    }
